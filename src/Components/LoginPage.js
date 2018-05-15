@@ -5,10 +5,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import '../styles/index.css';
 
-class LoginPage extends React.Component{
-    constructor(props){
-        super(props);
-    }
+class LoginPage extends React.Component{    
     componentDidMount(){
         
     }    
@@ -18,14 +15,16 @@ class LoginPage extends React.Component{
                 <Subheader style={{textAlign:"center"}}>Login with Email </Subheader>
                 <div className="input">
                     <TextField 
-                        hintText="example@mail.com"
+                        floatingLabelText="example@mail.com"
                         fullWidth={true}
+                        type="email"
                     />                    
                 </div>
                 <div className="input">
                     <TextField 
-                        hintText="**********"
+                        floatingLabelText="**********"
                         fullWidth={true}
+                        type="password"
                     />                    
                 </div>
                 <div className="input">

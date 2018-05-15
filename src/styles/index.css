@@ -4,7 +4,9 @@ body {
   font-family: sans-serif;
 }
 .content-body{
-  padding-top: 60px;
+  padding-top: 76px;
+  padding-left:10px;
+  padding-right:10px;
 }
 .content-body .school-card{
   margin-bottom: 10px;

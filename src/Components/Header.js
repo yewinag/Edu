@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
+import Divider from 'material-ui/Divider';
 import {Card, CardHeader} from 'material-ui/Card';
 
 import Person from 'material-ui/svg-icons/social/person';
@@ -54,18 +54,21 @@ class Header extends React.Component{
                     >
                         Homepage
                     </MenuItem>
+                    <Divider />
                     <MenuItem 
                         onClick={this.handleClose}
                         containerElement={<Link to={`/login`} />}
                     >
                         Login
                     </MenuItem>
+                    <Divider />
                     <MenuItem 
                         onClick={this.handleClose}
                         containerElement={<Link to={`/register`} />}
                     >
                         Register
                     </MenuItem>
+                    <Divider />
                 </Drawer>    
             </div>
 

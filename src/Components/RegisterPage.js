@@ -1,5 +1,4 @@
 import React from 'react';
-import update from 'immutability-helper';
 import { Link } from 'react-router-dom';
 import Subheader from 'material-ui/Subheader';
 import TextField from 'material-ui/TextField';
@@ -18,7 +17,6 @@ class RegisterPage extends React.Component{
             errors:[]
         }
     }
-
     register = () =>{
         if(this.validateEmail && this.validateConfirmPassword){
             
