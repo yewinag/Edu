@@ -7,11 +7,8 @@
 
     yarn run start
     
-    running localhost:9000
+    running localhost:3000
     //
 
-    cd /json-server
-    json-server --watch db.json
-    running localhost:3000
 
 
