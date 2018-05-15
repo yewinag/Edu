@@ -1,25 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Subheader from 'material-ui/Subheader';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import '../styles/index.css';
 
 class LoginPage extends React.Component{
     constructor(props){
         super(props);
     }
     componentDidMount(){
-        this.loadUserData();
-    }
-    loadUserData = () =>{
-        fetch('http://localhost:3001/')
-            .then(json => json.json())
-                .then(data =>{
-                    console.log(data);
-                })
-    }
+        
+    }    
     render() {
         return (
-            <div className="log-page">
+            <div className="content-body" style={{paddingLeft:"10px",paddingRight:"10px"}}>
                 <Subheader style={{textAlign:"center"}}>Login with Email </Subheader>
                 <div className="input">
                     <TextField 
@@ -52,7 +47,7 @@ class LoginPage extends React.Component{
                         style={{
                             margin:"10px 0"
                         }} 
-                        onClick={()=>this.props.callbackParent()}
+                        containerElement={<Link to="/register"/>}                        
                     />
   
                 </div>

@@ -9,20 +9,8 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-var mysql = require('mysql')
-
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '123456',
-  database: 'edu',
-  port: 	  '3306', 
-})
-
-connection.connect(function(err) {
-  if (err) throw err
-  console.log('You are now connected...')
-})
+var db = require('./models/db');
+var user = require('./models/user');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

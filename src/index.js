@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
 import App from './Components/App';
 import registerServiceWorker from './registerServiceWorker';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import EduTheme from './UI/EduTheme';
+import Root from './container/Root';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './styles/index.css';
+
+ReactDOM.render(
+    <MuiThemeProvider muiTheme={EduTheme}>
+        <Root />        
+    </MuiThemeProvider>
+    , document.getElementById('root'));
 registerServiceWorker();
